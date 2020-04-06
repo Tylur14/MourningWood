@@ -109,14 +109,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: SMG
   weaponID: 3
-  damageOut: 0.05
+  damageOut: 0.1
   shotRange: 50
   fireRate: 0.15
   fireTimer: 0
-  shotIndex: 1
-  xOutMod: {x: -0.05, y: 0.05}
   wallBulletHit: {fileID: 5266761135705099466, guid: 112fdd2340c82c14a8298749c80b5e34,
     type: 3}
+  playerTransform: {fileID: 0}
+  shotIndex: 1
+  xOutMod: {x: -0.05, y: 0.05}
 --- !u!82 &4281284658014332499
 AudioSource:
   m_ObjectHideFlags: 0

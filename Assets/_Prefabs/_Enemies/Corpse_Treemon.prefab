@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5902064451431833375}
   - component: {fileID: 5520009427478517443}
   - component: {fileID: 2314659003572268358}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Corpse_Treemon
   m_TagString: Untagged
   m_Icon: {fileID: 0}

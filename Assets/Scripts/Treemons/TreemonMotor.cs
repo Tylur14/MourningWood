@@ -33,6 +33,7 @@ public class TreemonMotor : Entity
     [Header("Treemon Information")]
     public TreemonStates currentState;
     public bool focused; // Sets to true once it first sees the player and will now only seek out the player during it's 'MOVING' state.
+    public bool followingPlayer;
     public float attentionSpan;
     public float distanceFromPlayer;
     
@@ -118,6 +119,7 @@ public class TreemonMotor : Entity
         {
             // Run down attention span
             agent.isStopped = true;
+
             if (attentionSpan > 0)
                 attentionSpan -= Time.deltaTime;
             else if (attentionSpan <= 0)
@@ -131,6 +133,9 @@ public class TreemonMotor : Entity
     void State_MOVING()
     {
         // MOVE TO TARGET
+
+        if (followingPlayer)
+            NavToTarget();
 
         agent.isStopped = false;
         if (attentionSpan > 0)
@@ -215,17 +220,21 @@ public class TreemonMotor : Entity
 
         // ?! - This needs to be heavily tested because I have no bloody idea if this produces the intended result!
         // Move the AI towards the player
-        if(i > 35)
+        if(i > 8)
         {
+            attentionSpan = attentionSpan * 2;
             currentState = TreemonStates.MOVING;
-            if(GetComponent<CAnimationController>() != null)
+            followingPlayer = true;
+            if (GetComponent<CAnimationController>() != null)
                 GetComponent<CAnimationController>().ChangeAnimation(1);
             PickDestination(false);
         }
         // Move the AI in a random direction
-        else if (i <= 34 && i > 24)
+        else if (i <= 8 && i > 3)
         {
             currentState = TreemonStates.MOVING;
+            followingPlayer = false;
+            attentionSpan = attentionSpan / 2;
             if (GetComponent<CAnimationController>() != null)
                 GetComponent<CAnimationController>().ChangeAnimation(1);
             PickDestination(true);
@@ -234,6 +243,7 @@ public class TreemonMotor : Entity
         else
         {
             currentState = TreemonStates.IDLE;
+            attentionSpan = attentionSpan / 2;
             if (GetComponent<CAnimationController>() != null)
                 GetComponent<CAnimationController>().ChangeAnimation(0);
         }

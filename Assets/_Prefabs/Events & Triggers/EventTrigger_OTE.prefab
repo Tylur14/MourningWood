@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6322409092506658755}
   - component: {fileID: 6322409092506658753}
   - component: {fileID: 6322409092506658783}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: EventTrigger_OTE
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}

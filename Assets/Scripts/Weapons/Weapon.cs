@@ -52,7 +52,10 @@ public class Weapon : MonoBehaviour
         {
             target.GetComponent<Entity>().TakeDamage(damageOut);
             if (target.GetComponent<TreemonMotor>() != null)
+            {
                 target.GetComponent<TreemonMotor>().focused = true;
+                target.GetComponent<TreemonMotor>().YellForHelp();
+            }
         }
     }
 }
