@@ -206,7 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Axe
   weaponID: 0
-  damageOut: 0.05
+  damageOut: 0.25
   shotRange: 5
   fireRate: 0.75
   fireTimer: 0
