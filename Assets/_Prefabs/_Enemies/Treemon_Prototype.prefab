@@ -516,7 +516,7 @@ MonoBehaviour:
   _moveSpeed: 1
   dead: 0
   _anim: {fileID: 0}
-  lookRadius: 9.95
+  lookRadius: 20
   canLoseFocus: 0
   attentionSpanScope: {x: 0.45, y: 1.5}
   damageOut: 0.075

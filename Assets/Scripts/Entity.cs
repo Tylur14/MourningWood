@@ -13,6 +13,7 @@ public class Entity : MonoBehaviour
     [SerializeField] float _health;              // The current health for the entity
     public float maxHealth;                      // The starting health for the entity
     [SerializeField] AudioClip[] _audio_Hurt;    // The SFX for the entity being hurt but not killed
+    [SerializeField] GameObject _hitEffect;      // Death SFX for the entity
     [SerializeField] GameObject _deathEffect;    // Death SFX for the entity
     public float _moveSpeed;
 
@@ -29,7 +30,6 @@ public class Entity : MonoBehaviour
 
     public void TakeDamage(float DamageTaken)
     {
-        print(this.gameObject.name + " took " + DamageTaken + " points of damage!");
         _health -= DamageTaken;
         if (_health <= 0 && dead==false) 
             Die();
@@ -43,6 +43,12 @@ public class Entity : MonoBehaviour
                 _audioSrc.Play();
         }
          
+    }
+
+    public void DisplayHit(Vector3 hitPos)
+    {
+        if(_hitEffect!=null)
+            Instantiate(_hitEffect, hitPos, Quaternion.identity);
     }
 
     public void Die()

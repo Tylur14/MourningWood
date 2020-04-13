@@ -31,11 +31,7 @@ public class Weapon : MonoBehaviour
         {
             if (hit.transform.gameObject.tag == "Entity") // Really this just applies to treemons?
             {
-                //hit.transform.gameObject.GetComponent<Treemon>().TakeDamage(damageOut);
-                //hit.transform.gameObject.GetComponent<Treemon>().focused = true;
-                //hit.transform.gameObject.GetComponent<Treemon>().YellForHelp();
-                DealDamage(hit.transform.gameObject);
-
+                DealDamage(hit.transform.gameObject,hit.point);
             }
             else if (hit.transform.gameObject.tag == "Player")
                 hit.transform.gameObject.GetComponent<Player>().TakeDamage(damageOut);
@@ -46,11 +42,12 @@ public class Weapon : MonoBehaviour
         }
 
     }
-    void DealDamage(GameObject target)
+    void DealDamage(GameObject target, Vector3 pos)
     {
         if (target.GetComponent<Entity>() != null)
         {
             target.GetComponent<Entity>().TakeDamage(damageOut);
+            target.GetComponent<Entity>().DisplayHit(pos);
             if (target.GetComponent<TreemonMotor>() != null)
             {
                 target.GetComponent<TreemonMotor>().focused = true;

@@ -113,7 +113,7 @@ MonoBehaviour:
   shotRange: 15
   fireRate: 0.85
   fireTimer: 0
-  wallBulletHit: {fileID: 5266761135705099466, guid: 112fdd2340c82c14a8298749c80b5e34,
+  wallBulletHit: {fileID: 1000010844420130, guid: 4edabb1c0dde62743b137378c7d22980,
     type: 3}
   playerTransform: {fileID: 0}
   shotIndex: 7

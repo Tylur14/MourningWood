@@ -1950,7 +1950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: 95703b29f49b899499233ea7308bb800, type: 3}
-  BlockCount: 512
+  BlockCount: 570
 --- !u!1 &5749809347714593951
 GameObject:
   m_ObjectHideFlags: 0
@@ -3192,7 +3192,7 @@ GameObject:
   - component: {fileID: 5749809348431581741}
   - component: {fileID: 5749809348431581743}
   - component: {fileID: 5749809348431581742}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
