@@ -511,6 +511,7 @@ MonoBehaviour:
   _health: 1
   maxHealth: 1
   _audio_Hurt: []
+  _hitEffect: {fileID: 1000013169864706, guid: e5a3d6da48298a0458c1990f58c27069, type: 3}
   _deathEffect: {fileID: 5902064451431833373, guid: c624f3919189e42418ff614d1287c436,
     type: 3}
   _moveSpeed: 1

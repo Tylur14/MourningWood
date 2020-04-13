@@ -9,6 +9,7 @@ public class Event_Trigger : MonoBehaviour
     [Header("Trigger Settings")]
     public TriggerState triggerState;           // Is it an interaction (with button press) or does it trigger when player enters collider
     public bool requiresKey = false;            // Does this trigger require the player to have a specific key?
+    [SerializeField] string displayMessage;
     [Range(0,2)]
     public int assocdKeyID;                     // 0 = gold key, 1 = silver key, 2 = bone key 
     public bool replayable = true;              // Possibly going to be removed, but added in case I want events that can be triggered multiple times
@@ -101,11 +102,12 @@ public class Event_Trigger : MonoBehaviour
 
     public bool CheckKey()
     {
+        print("Checking!");
         if (requiresKey)
         {
             if (GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>().hasKeys[assocdKeyID] == true)
                 return true;
-            else { ableToActivate = false; GameObject.FindGameObjectWithTag("Display_GuiMessage").GetComponent<Display_GUIMessage>().DisplayWarning("Something seals this path..."); return false; }
+            else { ableToActivate = false; GameObject.FindGameObjectWithTag("Display_GuiMessage").GetComponent<Display_GUIMessage>().DisplayWarning(displayMessage); return false; }
         }
         else return true;
     }

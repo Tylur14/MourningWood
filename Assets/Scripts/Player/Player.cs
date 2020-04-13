@@ -71,6 +71,6 @@ public class Player : MonoBehaviour
 
     public void UpdateHealthDisplay()
     {
-        healthDisplay.text = "Health: " + (100 * health).ToString("#") + "%";
+        healthDisplay.text = (100 * health).ToString("#") + "%";
     }
 }

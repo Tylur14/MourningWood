@@ -732,6 +732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerState: 0
   requiresKey: 1
+  displayMessage: Bones for the bone door...
   assocdKeyID: 2
   replayable: 0
   moverParentEvents:

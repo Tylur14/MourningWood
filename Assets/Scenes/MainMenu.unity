@@ -1597,7 +1597,7 @@ MonoBehaviour:
   sfx_SelectionChange: {fileID: 1218270956}
   sfx_SelectionSubmit: {fileID: 1973745789}
   clips_SelectionSubmits:
-  - {fileID: 8300000, guid: af077444cd5cd3447a42f63a87fa57c4, type: 3}
+  - {fileID: 8300000, guid: e20a2d5cf7c7ea741a65cd1f13e912bd, type: 3}
   - {fileID: 8300000, guid: e20a2d5cf7c7ea741a65cd1f13e912bd, type: 3}
   - {fileID: 8300000, guid: e20a2d5cf7c7ea741a65cd1f13e912bd, type: 3}
   selectionEvents:
@@ -1898,7 +1898,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1527785583
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1915,9 +1915,9 @@ RectTransform:
   m_Father: {fileID: 1175284484}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 460, y: -640}
   m_SizeDelta: {x: 920, y: 153.01569}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1603044820

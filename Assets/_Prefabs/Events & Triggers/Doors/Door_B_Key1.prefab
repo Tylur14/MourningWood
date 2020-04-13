@@ -732,6 +732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerState: 0
   requiresKey: 1
+  displayMessage: A key of silver is needed...
   assocdKeyID: 1
   replayable: 0
   moverParentEvents:

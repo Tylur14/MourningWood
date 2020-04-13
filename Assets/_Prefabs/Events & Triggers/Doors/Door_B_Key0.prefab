@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 5260865634234293663}
   - component: {fileID: 5260865634234293648}
   m_Layer: 0
-  m_Name: Door_B_Key
+  m_Name: Door_B_Key0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -732,6 +732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerState: 0
   requiresKey: 1
+  displayMessage: The key of gold calls...
   assocdKeyID: 0
   replayable: 0
   moverParentEvents:
