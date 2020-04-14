@@ -24,7 +24,8 @@ public class Weapon_Melee : Weapon
         // Multi check to verify the player can use the weapon
         if (Input.GetButton("Fire1") && (fireTimer <= 0 || !requireFireRate))
             Attack();
-        else GetComponent<Animator>().SetBool("Attacking", false);
+        else if(Input.GetButtonUp("Fire1"))
+            GetComponent<Animator>().SetBool("Attacking", false);
 
         if (fireTimer > 0)
         { fireTimer -= Time.deltaTime; FindObjectOfType<PlayerInventory>().canSwapWeapons = false; }

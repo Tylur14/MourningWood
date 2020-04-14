@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SplashScreenController : MonoBehaviour
 {
+    [SerializeField] bool anyKeyToProgress = true;
     [SerializeField] string levelToLoad;
     [SerializeField] float timeToLoad;
 
@@ -13,15 +14,16 @@ public class SplashScreenController : MonoBehaviour
     [SerializeField] AudioSource sfx;
     void Update()
     {
-        if (Input.anyKeyDown)
+        if (Input.anyKeyDown && anyKeyToProgress)
             LoadNextLevel();
     }
-    void LoadNextLevel()
+    public void LoadNextLevel()
     {
         if (sfx != null)
             sfx.Play();
 
-        Instantiate(transitionEffect, new Vector3(0, -15, 0),Quaternion.identity);
+        if(transitionEffect != null)
+            Instantiate(transitionEffect, new Vector3(0, -15, 0),Quaternion.identity);
 
         StartCoroutine(loadLevel());
         IEnumerator loadLevel()

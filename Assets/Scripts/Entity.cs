@@ -13,14 +13,16 @@ public class Entity : MonoBehaviour
     [SerializeField] float _health;              // The current health for the entity
     public float maxHealth;                      // The starting health for the entity
     [SerializeField] AudioClip[] _audio_Hurt;    // The SFX for the entity being hurt but not killed
+    [SerializeField] AudioSource _audioSrc;
     [SerializeField] GameObject _hitEffect;      // Death SFX for the entity
     [SerializeField] GameObject _deathEffect;    // Death SFX for the entity
     public float _moveSpeed;
 
     [Header("Entity Status")]
     [SerializeField] bool dead = false;          // Is the entity dead? If so what do we want to do with it?
-    private AudioSource _audioSrc;
     [SerializeField] Animator _anim;
+
+    [SerializeField] bool TESTING_SetTransform;
 
     public void Start()
     {
@@ -56,7 +58,12 @@ public class Entity : MonoBehaviour
         dead = true;
         if (_deathEffect != null)
         {
-            Instantiate(_deathEffect, this.transform.position, Quaternion.identity);
+            var dEffect = Instantiate(_deathEffect, this.transform.position, Quaternion.identity);
+            if (TESTING_SetTransform)
+            {
+                dEffect.transform.position = this.transform.position;
+                dEffect.transform.rotation = this.transform.rotation;
+            }
             Destroy(this.gameObject);
         }
             

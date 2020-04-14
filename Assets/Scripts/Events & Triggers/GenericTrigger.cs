@@ -7,6 +7,13 @@ using UnityEngine.Events;
 public class GenericTrigger : MonoBehaviour
 {
     [SerializeField] UnityEvent[] events;
+
+    private void Start()
+    {
+        if (GetComponent<MeshRenderer>() != null)
+            GetComponent<MeshRenderer>().enabled = false;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")

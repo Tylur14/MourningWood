@@ -44,6 +44,7 @@ public class Weapon : MonoBehaviour
     }
     void DealDamage(GameObject target, Vector3 pos)
     {
+        print(target);
         if (target.GetComponent<Entity>() != null)
         {
             target.GetComponent<Entity>().TakeDamage(damageOut);

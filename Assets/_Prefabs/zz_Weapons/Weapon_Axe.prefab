@@ -208,10 +208,9 @@ MonoBehaviour:
   weaponID: 0
   damageOut: 0.25
   shotRange: 5
-  fireRate: 0.75
+  fireRate: 1
   fireTimer: 0
-  wallBulletHit: {fileID: 5266761135705099466, guid: 112fdd2340c82c14a8298749c80b5e34,
-    type: 3}
+  wallBulletHit: {fileID: 0}
   playerTransform: {fileID: 0}
   requireFireRate: 1
   idleSFX: {fileID: 0}

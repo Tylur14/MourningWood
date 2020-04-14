@@ -40,6 +40,14 @@ public class PlayerInput : PlayerMotor
     }
     private void FixedUpdate()
     {
+        if (characterController.velocity != Vector3.zero)
+            PlayWalkSFX();
+        else if (characterController.velocity == Vector3.zero && walkSrc.isPlaying)
+            walkSrc.Stop();
+
+        if (characterController.velocity != Vector3.zero)
+            print(characterController.velocity);
+
         if (!gameController.gameIsPaused)
         {
             Move(new Vector2(input.x, input.y)); // Move player
