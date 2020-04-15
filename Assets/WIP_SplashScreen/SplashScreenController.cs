@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class SplashScreenController : MonoBehaviour
 {
     [SerializeField] bool anyKeyToProgress = true;
+    [SerializeField] bool test_ENDSCENE;
     [SerializeField] string levelToLoad;
     [SerializeField] float timeToLoad;
 
@@ -16,6 +17,9 @@ public class SplashScreenController : MonoBehaviour
     {
         if (Input.anyKeyDown && anyKeyToProgress)
             LoadNextLevel();
+
+        if (test_ENDSCENE)
+            Cursor.lockState = CursorLockMode.Confined;
     }
     public void LoadNextLevel()
     {
@@ -32,5 +36,10 @@ public class SplashScreenController : MonoBehaviour
             SceneManager.LoadScene(levelToLoad);
         }
         
+    }
+
+    public void QuitGame() // PLACEHOLDER - FOR GAME JAM VERSION ONLY
+    {
+        Application.Quit();
     }
 }

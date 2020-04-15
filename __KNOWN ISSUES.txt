@@ -1,0 +1,31 @@
+This is just a simple list of known issues. This will be split in two lists, current issues on the top and resolved issues below.
+Message me on Discord @ Diabetic Gummybears#7959 if you find any issues.
+
+Document creation: April 4th, 2020
+
+ACTIVE ISSUES:
+
+[Issues that can be detected in game]
+
+ * Clunky scene transitions
+ * Enemies can alert fellow Treemons through walls causing unintended behavoir and enemies moving through walls
+ * Major auido balancing issues -- I.E. the Treemons taking damage sound effect is almost always drowned out by other SFX
+ * Lack of enemy variety. Just one simple charge at player type
+ * No tracking of information like 'time played in level' '% tracking for enemies killed, items picked up, or secrets found' etc...
+ * No way to interact with options menu.
+	|-> So technically there is an options menu but I wasn't able to get it implemented in time or elegantly.
+	|->> Like the menu looks ugly and the options don't always stick? Will need to write seperate bug on that one day
+ * Jukebox is 3D model and should be converted into sprites like the Treemons
+ * Buttons do no have a texture
+
+[Isses that are engine side]
+
+ * All Door_B_(x) and Door_Secret_NoKey prefabs are not structured to permit elegant relative movements like other door prefabs.
+	|-> These prefabs need the parent to be an empty, and the moved object to be a child of that empty. See other door
+	|->> prefabs for example.
+ * Door_B_NoKey, Door_Secret_NoKey, and TrapDoor do not have file icons making them hard to distinguish at a glance
+ * All Door_Gate_(x) prefabs have the same or similar file icons making them hard to distinguish at a glance
+ * Prefab TrapDoor does not follow naming convention of a door prefab
+ * EndScene is just a whole bloody mess
+
+RESOLVED ISSUES:
