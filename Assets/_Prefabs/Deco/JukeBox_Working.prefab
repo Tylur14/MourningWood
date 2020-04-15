@@ -273,7 +273,7 @@ GameObject:
   - component: {fileID: 5681648346269658771}
   m_Layer: 0
   m_Name: JukeBox_Working
-  m_TagString: Untagged
+  m_TagString: Entity
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -331,10 +331,12 @@ MonoBehaviour:
   _audio_Hurt: []
   _audioSrc: {fileID: 0}
   _hitEffect: {fileID: 0}
-  _deathEffect: {fileID: 0}
+  _deathEffect: {fileID: 291840642785912963, guid: 3f204edcabda8504e881e0bdadc7ea31,
+    type: 3}
   _moveSpeed: 0
   dead: 0
   _anim: {fileID: 0}
+  TESTING_SetTransform: 1
 --- !u!1 &5681650806099141915
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,7 +769,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6c5ec4e9a75401448843bebc09938bdd, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 1

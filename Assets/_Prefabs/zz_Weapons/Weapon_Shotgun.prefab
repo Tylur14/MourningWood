@@ -110,14 +110,14 @@ MonoBehaviour:
   weaponName: Shotgun
   weaponID: 2
   damageOut: 0.1
-  shotRange: 15
+  shotRange: 50
   fireRate: 0.85
   fireTimer: 0
   wallBulletHit: {fileID: 1000010844420130, guid: 4edabb1c0dde62743b137378c7d22980,
     type: 3}
   playerTransform: {fileID: 0}
-  shotIndex: 7
-  xOutMod: {x: -0.1, y: 0.1}
+  shotIndex: 15
+  xOutMod: {x: -0.24, y: 0.24}
 --- !u!82 &9091552545433314456
 AudioSource:
   m_ObjectHideFlags: 0

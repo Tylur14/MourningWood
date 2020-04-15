@@ -45,8 +45,6 @@ public class PlayerInput : PlayerMotor
         else if (characterController.velocity == Vector3.zero && walkSrc.isPlaying)
             walkSrc.Stop();
 
-        if (characterController.velocity != Vector3.zero)
-            print(characterController.velocity);
 
         if (!gameController.gameIsPaused)
         {
