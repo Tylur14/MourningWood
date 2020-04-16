@@ -17,6 +17,8 @@ ACTIVE ISSUES:
 	|->> Like the menu looks ugly and the options don't always stick? Will need to write seperate bug on that one day
  * Jukebox is 3D model and should be converted into sprites like the Treemons
  * Buttons do no have a texture
+ * Arrow keys should rotate player view like the mouse does
+ * On some builds, the main menu UI seems off-center
 
 [Isses that are engine side]
 
