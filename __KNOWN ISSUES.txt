@@ -19,6 +19,8 @@ ACTIVE ISSUES:
  * Buttons do no have a texture
  * Arrow keys should rotate player view like the mouse does
  * On some builds, the main menu UI seems off-center
+ * Resolution can't be changed
+ * End Scene is clunk in that sometimes players will unintentionally skip through it
 
 [Isses that are engine side]
 
